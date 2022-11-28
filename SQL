@@ -1,0 +1,95 @@
+select * from students;
+--1Вывести все поля и все строки
+SELECT * FROM students;
+--2Вывести всех студентов в таблице
+select id, name from students;
+--3Вывести только Id пользователей
+select id from students;
+--4Вывести только имя пользователей
+select name from students;
+--5Вывести только email пользователей
+select email from students;
+--6Вывести имя и email пользователей
+select name, email from students;
+--7Вывести id, имя, email и дату создания пользователей
+select id, name, email, created_on from students;
+--8Вывести пользователей где password 12333
+select * from students where password='12333';
+--9Вывести пользователей которые были созданы 2021-03-26 00:00:00
+select * from students where created_on='2021-03-26 00:00:00';
+--10Вывести пользователей где в имени есть слово Анна
+select * from students where name like'%Anna%';
+--11Вывести пользователей где в имени в конце есть 8
+select * from students where name like'%8';
+--12Вывести пользователей где в имени в есть буква а
+select * from students where name like'%a%';
+--13Вывести пользователей которые были созданы 2021-07-12 00:00:00
+select * from students where created_on='2021-07-12 00:00:00';
+--14Вывести пользователей которые были созданы 2021-07-12 00:00:00 и имеют пароль 1m313
+select * from students where created_on='2021-07-12 00:00:00' and password='1m313';
+--15Вывести пользователей которые были созданы 2021-07-12 00:00:00 и у которых в имени есть слово Andrey
+select * from students where created_on='2021-07-12 00:00:00' and name='%Andrey%';
+--16Вывести пользователей которые были созданы 2021-07-12 00:00:00 и у которых в имени есть цифра 8
+select * from students where created_on='2021-07-12 00:00:00' and name='%8%';
+--17Вывести пользователя у которых id равен 110
+select * from students where id=110;
+-- 18Вывести пользователя у которых id равен 153
+SELECT * from students where id=153;
+--19Вывести пользователя у которых id больше 140
+SELECT * from students where id>140;
+-- 20Вывести пользователя у которых id меньше 130
+SELECT * from students where id<130;
+ --21Вывести пользователя у которых id меньше 127 или больше 188
+SELECT * from students where id>127 and id<188;
+--22Вывести пользователя у которых id меньше либо равно 137
+SELECT * from students where id<=137;
+-- 23Вывести пользователя у которых id больше либо равно 137
+SELECT * from students where id>=137;
+--24. Вывести пользователя у которых id больше 180 но меньше 190
+SELECT * from students where id>180 and id<190;
+--Вывести пользователя у которых id между 180 и 190
+SELECT * from students where id>180 and id<190;
+
+create table salary(
+id serial primary key,
+monthly_salary int not null
+);
+
+
+insert into salary(monthly_salary)
+values (500),
+(900),
+(1000),
+(1400),
+(1500);
+
+create table roles(id serial primary key, role_title varchar (50) unique not null);
+
+insert into roles(role_title)
+values ('Junior_qa'),
+       ('Middle_qa'),
+	   ('Senior_qa'),
+('Junior_java_developer'),
+('Middle_java_developer'),
+('Senior_java_developer');
+
+
+salary (monthly_salary) 
+employees (employee_name)
+insert into employee_salary (employee_id, salary_id)
+
+select employee_salary.employee_id, employee_salary.salary_id, employees.id, employees.employee_name
+from employee_salary join employees 
+on employee_salary.employee_id = employees.id
+
+
+roles_employee (employee_id, role_id)
+roles (role_name)
+
+select salary.monthly_salary, employee_salary.employee_id, employee_salary.salary_id, employees.employee_name, roles.role_name, roles_employee.employee_id, roles_employee.role_id
+from employee_salary full join employees
+on employee_salary.employee_id = employees.id
+full join salary on salary.id = employee_salary.salary_id
+full join roles_employee on roles_employee.employee_id = employees.id
+full join roles on roles.id = roles_employee.role_id
+where roles.role_name like 'Junior%_QA_engineer';
