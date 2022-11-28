@@ -22,3 +22,6 @@ The columns in every SELECT statement must also be in the same order
 ### SQL Joins
 >> A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
 
+[Practice work SQL] (https://github.com/Ingaiv/My-self-study/blob/Practice/SQL)
+
+
