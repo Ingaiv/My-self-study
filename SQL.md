@@ -5,6 +5,9 @@
 >> is software to create and manage databases, allowing users to create, read, update and delete data in a database.
 >> The DBMS provides a centralized view of data that can be accessed by multiple users from multiple locations in a controlled manner.
 
+* SQL (pronounced "sequel") stands for Structured Query Language and is a standardized language that is used to add, delete, and modify data stored within a relational database.
+* There are two types of SQL functions, aggregate functions, and scalar(non-aggregate) functions. Aggregate functions operate on many records and produce a summary, works with GROUP BY whereas non-aggregate functions operate on each record independently.
+
 ----
 ### Relational databases
 >> A relational database typically stores information in tables containing specific pieces and types of data. This form of data storage is often called structured data.For example, a shop could store details of their customers’ names and addresses in one table and details of their orders in another. 
