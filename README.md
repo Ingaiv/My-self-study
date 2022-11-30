@@ -24,6 +24,6 @@ The columns in every SELECT statement must also be in the same order
 
 ----
 
-[Practice work SQL] (#https://github.com/Ingaiv/My-self-study/blob/Practice/SQL "Practice work SQL") https://github.com/Ingaiv/My-self-study/blob/Practice/SQL
+[Practice work SQL] (#https://github.com/Ingaiv/My-self-study/blob/Practice/SQL"Practice work SQL") https://github.com/Ingaiv/My-self-study/blob/Practice/SQL
 
 
