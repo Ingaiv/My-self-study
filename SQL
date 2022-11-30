@@ -311,6 +311,10 @@ inner join salary on salary.id = employee_salary.salary_id
 inner join roles on roles.id = roles_employee.role_id
 where  monthly_salary < 2300
 order by monthly_salary Asc;
+
+<p><red> 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2200</red>
+
+
 -- 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2200
 select salary.monthly_salary, employee_salary.employee_id, employee_salary.salary_id, employees.employee_name, roles.role_name, roles_employee.employee_id, roles_employee.role_id
 from roles_employee join employees 
@@ -321,4 +325,5 @@ inner join salary on salary.id = employee_salary.salary_id
 inner join roles on roles.id = roles_employee.role_id
 where  monthly_salary = 1100 or monthly_salary = 1500 or monthly_salary = 2200
 order by monthly_salary Asc;
+
 
