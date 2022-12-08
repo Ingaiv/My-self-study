@@ -1,5 +1,4 @@
-select * from students;
---1Вывести все поля и все строки
+#### --1Вывести все поля и все строки ####
 SELECT * FROM students;
 --2Вывести всех студентов в таблице
 select id, name from students;
